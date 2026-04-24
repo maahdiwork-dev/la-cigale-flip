@@ -1,5 +1,7 @@
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const facebookUrl = 'https://www.facebook.com/profile.php?id=100083083994747'
+  const instagramUrl = 'https://www.instagram.com/la_cigale__coco_beach'
 
   return (
     <footer className="bg-charcoal text-white">
@@ -91,11 +93,11 @@ export default function Footer() {
               </li>
             </ul>
 
-            {/* Social links placeholder */}
             <div className="flex gap-3 mt-6">
-              {/* INSERT SOCIAL MEDIA LINKS HERE */}
               <a
-                href="#"
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
               >
@@ -104,7 +106,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
               >

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import heroImage from '../assets/images/hero/hero-main.jpg'
 
 export default function Hero() {
   const handleScrollTo = (e, id) => {
@@ -12,10 +13,12 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-[#0c4a6e]" />
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary-dark/70 to-[#0c4a6e]/75" />
 
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Sun */}
         <motion.div
